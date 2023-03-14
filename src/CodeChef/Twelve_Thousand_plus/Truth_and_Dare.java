@@ -34,11 +34,13 @@ public class Truth_and_Dare {
             for (int i = 0; i < o; i++) {
                 if (!truth.contains(truth2.get(i))) {
                     ans=false;
+                    break;
                 }
             }
             for (int i = 0; i < p; i++) {
                 if (!dare.contains(dare2.get(i))){
                     ans=false;
+                    break;
                 }
             }
             System.out.println(ans?"yes":"no");
