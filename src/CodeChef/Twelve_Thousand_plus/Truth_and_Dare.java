@@ -1,5 +1,6 @@
-//https://www.codechef.com/problems/TRUEDARE?tab=statement
 package CodeChef.Twelve_Thousand_plus;
+
+//https://www.codechef.com/problems/TRUEDARE
 
 import java.util.ArrayList;
 import java.util.List;
