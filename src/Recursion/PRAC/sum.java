@@ -62,7 +62,7 @@ public class sum {
         int n = 5;
         int sum = 5;
         List<Integer> list = new ArrayList<>();
-    //    print(0, list, 0, sum, arr, n);
+        print(0, list, 0, sum, arr, n);
         print_One(0, list, 0, sum, arr, n);
         System.out.println(print_count(0,0,sum,arr,n));
     }
