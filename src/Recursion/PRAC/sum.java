@@ -40,6 +40,22 @@ public class sum {
         // Not Pick
         return print_One(ind + 1, list, s, sum, arr, n);
     }
+    private static int print_count(int ind, int s, int sum, int[] arr, int n) {
+        if (ind == n) {
+            if (s == sum) {
+                return 1;
+            }
+            else return 0;
+        }
+        s += arr[ind];
+        int l=print_count(ind + 1,  s, sum, arr, n);
+        s -= arr[ind];
+
+        // Not Pick
+        int r=print_count(ind + 1,  s, sum, arr, n);
+        return l+r;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
@@ -48,5 +64,6 @@ public class sum {
         List<Integer> list = new ArrayList<>();
     //    print(0, list, 0, sum, arr, n);
         print_One(0, list, 0, sum, arr, n);
+        System.out.println(print_count(0,0,sum,arr,n));
     }
 }
