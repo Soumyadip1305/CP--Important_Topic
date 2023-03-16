@@ -42,4 +42,48 @@ public class Selection_Sort {
             System.out.print(j + " ");
         }
     }
+    
+    // Another Amazing concept _-_-_-_-_-_-_-_-_-_-_
+    
+    public static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int lastIndex = arr.length - i - 1;
+            int maxIndex = getMax(arr, 0, lastIndex);
+            swap(arr, maxIndex, lastIndex);
+        }
+    }
+
+    public static void swap(int[] arr, int index1, int index2) {
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    }
+
+    public static int getMax(int[] arr, int start, int end) {
+        int max = start;
+        for (int i = start; i <= end; i++) {
+            if (arr[max] < arr[i]) {
+                max = i;
+            }
+        }
+        return max;
+    }
+    
+    // Using Recursion  -_-_-_-_-_-_-_-_-
+    
+    public static void SelectionSort(int[] arr, int i, int j) {
+        int n = arr.length - 1;
+        if (i == n) {
+            return;
+        }
+        if (arr[i] > arr[j]) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        if (j == n) {
+            SelectionSort(arr, i + 1, i + 2);
+        } else {
+            SelectionSort(arr, i, j + 1);
+        }
 }
