@@ -15,7 +15,6 @@ public class Insertion_Sort {
         for (int i=0;i< Array.length;i++){
             System.out.print(Array[i]+" ");
         }
-
         for (int i=1;i< Array.length;i++){
             int Current=Array[i];
             int j=i-1;
@@ -24,13 +23,25 @@ public class Insertion_Sort {
                 j--;
             }Array[j+1]=Current;
         }
-
-
-
         System.out.println();
         System.out.print("Your Sorted Array is ");
         for (int i=0;i<Array.length;i++){
             System.out.print(Array[i]+" ");
         }
+    }
+    
+    
+    //  InsertionSort using Recursion -_-_-_-_-_-_-_-_-_-
+    
+     public static void insertionRec(int []arr,int n){
+        if (n<=1){
+            return;
+        }
+        int j=n-2;
+        int last=arr[n-1];
+        while (j>=0&&arr[j]>last){
+            arr[j+1]=arr[j];
+            j--;
+        }arr[j+1]=last;
     }
 }
