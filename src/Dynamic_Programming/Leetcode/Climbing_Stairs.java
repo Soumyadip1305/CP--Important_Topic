@@ -1,10 +1,8 @@
 package Dynamic_Programming.Leetcode;
 
-import OOPS.Package.Access.A;
+/*          https://leetcode.com/problems/climbing-stairs/description/            */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public class Climbing_Stairs {
     public static int climbStairs(int n) {
